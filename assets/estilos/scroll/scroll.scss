@@ -1,0 +1,23 @@
+@import '../variables';
+
+.libreria-greensock {
+    h1 {
+        text-align: center;
+    }
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(21rem, 100%), 1fr));
+        grid-auto-flow: dense;
+        gap: 1rem;
+        justify-content: center;
+        align-items: stretch;
+
+        .card {
+            min-height: 300px;
+            color: $white;
+            background-color: $grey-dark;
+            border-radius: 7px;
+            padding: 1em 1.5em;
+        }
+    }
+}

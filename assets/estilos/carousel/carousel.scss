@@ -1,0 +1,41 @@
+@import '../variables';
+
+.libreria-greensock {
+    h1 {
+        text-align: center;
+    }
+    .controler-container {
+        margin: 1em auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        width: fit-content;
+    }
+    .container-cards {
+        position: relative;
+        overflow: hidden;
+        min-height: 332px;
+
+        .track-cards {
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            @media (max-width: 991px) {
+                grid-template-columns: 1fr;
+            }
+            grid-auto-flow: dense;
+            gap: 10px 1rem;
+            justify-content: center;
+            align-items: stretch;
+            max-height: 332px;
+    
+            .card {
+                min-height: 300px;
+                color: $white;
+                background-color: $grey-dark;
+                border-radius: 7px;
+                padding: 1em 1.5em;
+            }
+        }
+    }
+}

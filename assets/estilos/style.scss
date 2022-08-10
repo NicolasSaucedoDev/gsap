@@ -1,0 +1,73 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $white;
+}
+
+.libreria-greensock {
+    background-color: $grey-dark;
+
+    .titulo {
+        width: fit-content;
+        max-width: 100%;
+
+        background-color: $green-light;
+        
+        padding: .5em 1em;
+        margin: 0 auto;
+    }
+
+    .btn {
+        background-color: $green-dark;
+        color: $white;
+        display: block;
+        width: fit-content;
+        padding: 0.5em 1em;
+        margin-top: 1rem;
+        border-radius: 7px;
+        text-decoration: none;
+        
+        &:hover {
+            color: $green-light;
+            background-color: $grey-dark;
+        }
+    }
+
+
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(21rem, 100%), 1fr));
+        grid-auto-flow: dense;
+        gap: 1rem;
+        justify-content: center;
+        align-items: stretch;
+        margin: 1rem 2rem;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px;
+            
+            padding: 1em;
+            border-radius: 7px;
+            background-color: $green-light;
+            overflow: hidden;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+            p {
+                flex-grow: 1;
+            }
+
+            img {
+                max-width: 50px;
+            }
+        }
+    }
+}
